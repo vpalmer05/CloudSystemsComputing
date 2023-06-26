@@ -5,7 +5,71 @@ h1 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 68px;
 }
+#seals {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-#sealphoto {
-    border-radius: 20px;
+#seals td, #seals th {
+  border: 6px solid #ddd;
+  padding: 8px;
+}
+
+#seals tr:nth-child(even){background-color: #f2f2f2;}
+
+#seals tr:hover {background-color: darksalmon;}
+
+#seals th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: cornflowerblue;
+  color: white;
+} 
+table {
+  width: 100%;
+}
+
+th {
+  height: 70px;
+}
+
+td {
+  text-align: center;
+}
+
+tr:hover {background-color: cornsilk;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+} 
+
+li a {
+  display: block;
+  background-color: cornflowerblue;
+}
+
+li a:hover {
+background-color:darksalmon;
+color: white;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+  font-family: Arial, Helvetica, sans-serif;
+  color: cornsilk;
+  border-radius: 10px;
+  background-color: cornflowerblue;
 }
