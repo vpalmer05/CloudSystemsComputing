@@ -6,20 +6,27 @@
     </head>
     <body>
         <h1>Hello World</h1>
+        <br>
 
+        <p id="totals"></p>
         <script>
             numbers = [0,1,2,3]
 
-            products = ["apple","banana"]
-
-            prices = [1.76, .98]
-
-            quantity = [2,5]
+            products = ["apple","banana","carrot"]
+            prices = [1.76,.98,1.31]
+            quantities = [2,5,4]
             
-            total = prices[1] * quantity[1]
+            text = ""
 
-            console.log(total)
+            for (let i = 0; i < products.length; i++) {
+                total = prices[i] * quantities[i]
+                text = text + products[i] + ": " + total + "<br>"
+                console.log(text)
+            }
+            document.getElementById("totals").innerHTML = text
+
         </script>
+
 
     </body>
 
