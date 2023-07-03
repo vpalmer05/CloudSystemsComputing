@@ -5,25 +5,45 @@
 
     </head>
     <body>
-        <h1>Hello World</h1>
+        <h1 id="fullName">Hello</h1>
+
+        <input type="text" id="name"></input>
+        <input type="button" onclick="printName()" value="Change Name"></input>
+
         <br>
 
-        <p id="totals"></p>
+        <table id="totals"></table>
+
         <script>
+
+            function printName(){
+                fullname = document.getElementById("name").value;
+                document.getElementById("fullName").innerHTML = "Hello " + fullname;
+            }
+
             numbers = [0,1,2,3]
 
-            products = ["apple","banana","carrot"]
-            prices = [1.76,.98,1.31]
-            quantities = [2,5,4]
+            products = ["apple","banana","carrot"];
+            prices = [1.76,.98,1.31];
+            quantities = [2,5,4];
             
-            text = ""
+            text = "<tr><th>Product Name</th><th>Price</th><th>Quantity</th><th>Total</th></tr>";
 
             for (let i = 0; i < products.length; i++) {
+                text = text + "<tr>"
                 total = prices[i] * quantities[i]
-                text = text + products[i] + ": " + total + "<br>"
-                console.log(text)
+
+                text = text +"<td>" + products[i]+ "</td>"; 
+                text = text +"<td>" + prices[i] + "</td>";
+                text = text +"<td>" + quantities[i] + "</td>";
+                text = text +"<td>" + total + "</td>";
+
+                text = text + "</tr>";
+
+                console.log(text);
             }
-            document.getElementById("totals").innerHTML = text
+
+        document.getElementById("totals").innerHTML = text
 
         </script>
 
