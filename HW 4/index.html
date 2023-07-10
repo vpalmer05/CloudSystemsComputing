@@ -43,7 +43,10 @@
                 
                 total = obj[i].price * quantities[i]
                 
-                text = text +"<td>" + "<a href= '" + obj[i].book_title + "'>" + obj[i].book_title + "</a>" +"</td>"; 
+
+                let encodedTitle = encodeURIComponent(obj[i].book_title);
+                text = text +"<td>" + "<img height=170px width= 150px src= 'products/imgs/" + obj[i].thumbnailUrl + "'>" + "</td>";
+                text = text +"<td>" + "<a href= 'products/" + obj[i].url + "'>" + obj[i].book_title + "</a>" +"</td>"; 
                 text = text +"<td>" + obj[i].author + "</td>";
                 text = text +"<td>" + obj[i].price + "</td>";
                 text = text +"<td>" + quantities[i] + "</td>";
