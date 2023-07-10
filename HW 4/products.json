@@ -1,6 +1,6 @@
 [
     {
-        "book title": "The Rabbit Hutch",
+        "book_title": "The Rabbit Hutch",
         "author": "Tess Gunty",
         "id": 1,
         "price": 17.00,
@@ -9,7 +9,7 @@
         "thumbnailUrl": "rabbithutch.jpg"
     },
     {
-        "book title": "Lessons in Chemistry",
+        "book_title": "Lessons in Chemistry",
         "author": "Bonnie Garmus",
         "id": 2,
         "price": 23.99,
@@ -18,7 +18,7 @@
         "thumbnailUrl": "lessoninchemistry.jpg"
     },
     {
-        "book title": "I'm Glad My Mom Died",
+        "book_title": "I'm Glad My Mom Died",
         "author": "Jennette McCurdy",
         "id": 3,
         "price": 21.99,
@@ -27,7 +27,7 @@
         "thumbnailUrl": "imglad.jpg"
     },
     {
-        "book title": "The Light We Carry: Overcoming in Uncertain Times",
+        "book_title": "The Light We Carry: Overcoming in Uncertain Times",
         "author": "Michelle Obama",
         "id": 4,
         "price": 22.75,
@@ -36,7 +36,7 @@
         "thumbnailUrl": "lightwecarry.jpg"
     },
     {
-        "book title": "A World of Curiosities",
+        "book_title": "A World of Curiosities",
         "author": "Louise Penny",
         "id": 5,
         "price": 17.10,

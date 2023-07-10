@@ -16,64 +16,15 @@
 
         <script>
 
-            products = `[
-                {
-                    "book_title": "The Rabbit Hutch",
-                    "author": "Tess Gunty",
-                    "id": 1,
-                    "price": 17.00,
-                    "description": "B+N Discover Prize Book",
-                    "url": "gunty.html",
-                    "thumbnailUrl": "rabbithutch.jpg"
-                },
-                {
-                    "book_title": "Lessons in Chemistry",
-                    "author": "Bonnie Garmus",
-                    "id": 2,
-                    "price": 23.99,
-                    "description": "B+N Book of the Year",
-                    "url": "garmus.html",
-                    "thumbnailUrl": "lessoninchemistry.jpg"
-                },
-                {
-                    "book_title": "I'm Glad My Mom Died",
-                    "author": "Jennette McCurdy",
-                    "id": 3,
-                    "price": 21.99,
-                    "description": "#1 International Bestseller",
-                    "url": "mccurdy.html",
-                    "thumbnailUrl": "imglad.jpg"
-                },
-                {
-                    "book_title": "The Light We Carry: Overcoming in Uncertain Times",
-                    "author": "Michelle Obama",
-                    "id": 4,
-                    "price": 22.75,
-                    "description": "#1 New York Times Bestseller",
-                    "url": "obama.html",
-                    "thumbnailUrl": "lightwecarry.jpg"
-                },
-                {
-                    "book_title": "A World of Curiosities",
-                    "author": "Louise Penny",
-                    "id": 5,
-                    "price": 17.10,
-                    "description": "Agatha Award Winner for Best Contemporary Novel",
-                    "url": "penny.html",
-                    "thumbnailUrl": "worldof.jpg"
-                }
-            ]`
+            fetch('https://raw.githubusercontent.com/vpalmer05/CloudSystemsComputing/main/HW%204/products.json')
+                .then(response => response.json())
+                .then(data => processData(data));
 
-            function printName(){
-                fullname = document.getElementById("name").value;
-                document.getElementById("fullName").innerHTML = "Hello " + fullname;
-            }
-
-            var obj = JSON.parse(products);
-            
-            quantities = [2,4,4,1,3];
-            
-            text = "<tr><th>Book Title</th><th>Author</th><th>Price</th><th>Quantity</th><th>Total</th><th>Description</th></tr>";
+            function processData(data){
+                var obj = data;
+                let price, quantity, total;
+                let quantities = [2, 4, 4, 1, 3];
+                let text = "<tr><th>Book Title</th><th>Author</th><th>Price</th><th>Quantity</th><th>Total</th><th>Description</th></tr>";
 
             for (let i = 0; i < obj.length; i++) {
                 text = text + "<tr>"
@@ -92,15 +43,12 @@
                 
                 total = obj[i].price * quantities[i]
                 
-                text = text +"<td>" + obj[i].book_title + "</td>"; 
+                text = text +"<td>" + "<a href= '" + obj[i].book_title + "'>" + obj[i].book_title + "</a>" +"</td>"; 
                 text = text +"<td>" + obj[i].author + "</td>";
                 text = text +"<td>" + obj[i].price + "</td>";
                 text = text +"<td>" + quantities[i] + "</td>";
                 text = text +"<td>" + total.toPrecision(4) + "</td>";
                 text = text +"<td>" + obj[i].description + "</td>";
-
-
-
 
                 text = text + "</tr>";
 
@@ -108,6 +56,12 @@
             }
 
         document.getElementById("totals").innerHTML = text
+        }
+
+        function printName(){
+                fullname = document.getElementById("name").value;
+                document.getElementById("fullName").innerHTML = "Hello " + fullname;
+        }
 
         </script>
 
