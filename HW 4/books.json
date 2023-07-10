@@ -1,0 +1,47 @@
+[
+    {
+        "book title": "The Rabbit Hutch",
+        "author": "Tess Gunty",
+        "id": 1,
+        "price": 17.00,
+        "description": "B+N Discover Prize Book",
+        "url": "gunty.html",
+        "thumbnailUrl": "rabbithutch.jpg"
+    },
+    {
+        "book title": "Lessons in Chemistry",
+        "author": "Bonnie Garmus",
+        "id": 2,
+        "price": 23.99,
+        "description": "B+N Book of the Year",
+        "url": "garmus.html",
+        "thumbnailUrl": "lessoninchemistry.jpg"
+    },
+    {
+        "book title": "I'm Glad My Mom Died",
+        "author": "Jennette McCurdy",
+        "id": 3,
+        "price": 21.99,
+        "description": "#1 International Bestseller",
+        "url": "mccurdy.html",
+        "thumbnailUrl": "imglad.jpg"
+    },
+    {
+        "book title": "The Light We Carry: Overcoming in Uncertain Times",
+        "author": "Michelle Obama",
+        "id": 4,
+        "price": 22.75,
+        "description": "#1 New York Times Bestseller",
+        "url": "obama.html",
+        "thumbnailUrl": "lightwecarry.jpg"
+    },
+    {
+        "book title": "A World of Curiosities",
+        "author": "Louise Penny",
+        "id": 5,
+        "price": 17.10,
+        "description": "Agatha Award Winner for Best Contemporary Novel",
+        "url": "penny.html",
+        "thumbnailUrl": "worldof.jpg"
+    }
+]
