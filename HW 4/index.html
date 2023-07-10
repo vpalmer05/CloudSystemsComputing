@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+
+    </head>
+    <body>
+        <h1 id="fullName">Hello</h1>
+
+        <input type="text" id="name"></input>
+        <input type="button" onclick="printName()" value="Change Name"></input>
+
+        <br>
+
+        <table id="totals"></table>
+
+        <script>
+
+            products = `[
+                {
+                    "book title": "The Rabbit Hutch",
+                    "author": "Tess Gunty",
+                    "id": 1,
+                    "price": 17.00,
+                    "description": "B+N Discover Prize Book",
+                    "url": "gunty.html",
+                    "thumbnailUrl": "rabbithutch.jpg"
+                },
+                {
+                    "book title": "Lessons in Chemistry",
+                    "author": "Bonnie Garmus",
+                    "id": 2,
+                    "price": 23.99,
+                    "description": "B+N Book of the Year",
+                    "url": "garmus.html",
+                    "thumbnailUrl": "lessoninchemistry.jpg"
+                },
+                {
+                    "book title": "I'm Glad My Mom Died",
+                    "author": "Jennette McCurdy",
+                    "id": 3,
+                    "price": 21.99,
+                    "description": "#1 International Bestseller",
+                    "url": "mccurdy.html",
+                    "thumbnailUrl": "imglad.jpg"
+                },
+                {
+                    "book title": "The Light We Carry: Overcoming in Uncertain Times",
+                    "author": "Michelle Obama",
+                    "id": 4,
+                    "price": 22.75,
+                    "description": "#1 New York Times Bestseller",
+                    "url": "obama.html",
+                    "thumbnailUrl": "lightwecarry.jpg"
+                },
+                {
+                    "book title": "A World of Curiosities",
+                    "author": "Louise Penny",
+                    "id": 5,
+                    "price": 17.10,
+                    "description": "Agatha Award Winner for Best Contemporary Novel",
+                    "url": "penny.html",
+                    "thumbnailUrl": "worldof.jpg"
+                }
+            ]`
+
+            function printName(){
+                fullname = document.getElementById("name").value;
+                document.getElementById("fullName").innerHTML = "Hello " + fullname;
+            }
+
+            var obj = JSON.parse(products);
+            
+            quantities = [2,5,4];
+            
+            text = "<tr><th>Product Name</th><th>Price</th><th>Quantity</th><th>Total</th></tr>";
+
+            for (let i = 0; i < products.length; i++) {
+                text = text + "<tr>"
+
+                if (prices[i] > 0){
+                    price = prices[i]
+                }else{
+                    price = 0
+                }
+
+                if (quantities[i] > 0){
+                    quantity = quantities[i]
+                }else{
+                    quantity = 0
+                }
+                
+                total = prices[i] * quantities[i]
+                
+                text = text +"<td>" + products[i]+ "</td>"; 
+                text = text +"<td>" + prices[i] + "</td>";
+                text = text +"<td>" + quantities[i] + "</td>";
+                text = text +"<td>" + total + "</td>";
+
+                text = text + "</tr>";
+
+                console.log(text);
+            }
+
+        document.getElementById("totals").innerHTML = text
+
+        </script>
+
+
+    </body>
+
+</html>
